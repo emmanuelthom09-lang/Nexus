@@ -1,0 +1,1304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#050816">
+    <meta name="description" content="Nexus Digital Solutions - Building high-performance websites, AI-powered systems and e-commerce solutions.">
+
+    <title>Nexus Digital Solutions | Own The Future</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg: #050816;
+            --card: #0b1224;
+            --blue: #2563eb;
+            --cyan: #22d3ee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #2563eb;
+            color: white;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #22d3ee, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glow {
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.12);
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+            backdrop-filter: blur(16px);
+        }
+
+        .hero-bg {
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(37,99,235,.18), transparent 35%),
+                radial-gradient(circle at 80% 20%, rgba(34,211,238,.12), transparent 35%),
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: auto, auto, 45px 45px, 45px 45px;
+        }
+
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(145deg, #0d1830, #080e1e);
+            border: 1px solid rgba(96,165,250,.18);
+        }
+
+        .gradient-border:hover {
+            border-color: rgba(34,211,238,.65);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 45px rgba(37,99,235,.12);
+        }
+
+        .transition-smooth {
+            transition: all .3s ease;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(85px);
+            opacity: .18;
+            pointer-events: none;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            transition: .3s;
+        }
+
+        .nav-link:hover {
+            color: #22d3ee;
+        }
+
+        .primary-btn {
+            background: linear-gradient(90deg, #2563eb, #0891b2);
+            box-shadow: 0 0 25px rgba(37,99,235,.25);
+            transition: .3s;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 35px rgba(34,211,238,.35);
+        }
+
+        .secondary-btn {
+            border: 1px solid rgba(96,165,250,.4);
+            transition: .3s;
+        }
+
+        .secondary-btn:hover {
+            border-color: #22d3ee;
+            background: rgba(34,211,238,.08);
+        }
+
+        .project-visual {
+            background:
+                radial-gradient(circle at 50% 30%, rgba(34,211,238,.2), transparent 60%),
+                #080f20;
+        }
+
+        .floating {
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .section-label {
+            color: #22d3ee;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media(max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===================================== -->
+<!-- NAVIGATION -->
+<!-- ===================================== -->
+
+<header class="fixed top-0 left-0 w-full z-50 glass">
+
+    <nav class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+
+        <!-- LOGO -->
+        <a href="#home" class="flex items-center gap-3">
+
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center glow">
+                <i data-lucide="hexagon" class="w-6 h-6 text-white"></i>
+            </div>
+
+            <div>
+                <h1 class="font-extrabold text-lg tracking-tight">
+                    Nexus <span class="gradient-text">Digital</span>
+                </h1>
+                <p class="text-[9px] tracking-[3px] text-slate-400 uppercase">
+                    Own The Future
+                </p>
+            </div>
+
+        </a>
+
+        <!-- DESKTOP LINKS -->
+        <div class="desktop-menu flex items-center gap-8">
+
+            <a href="#home" class="nav-link" data-i18n="navHome">Home</a>
+            <a href="#services" class="nav-link" data-i18n="navServices">Services</a>
+            <a href="#portfolio" class="nav-link" data-i18n="navPortfolio">Portfolio</a>
+            <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
+
+            <button id="languageBtn"
+                class="px-4 py-2 rounded-lg border border-cyan-400/40 text-cyan-300 text-sm font-bold hover:bg-cyan-400/10 transition">
+                SW
+            </button>
+
+            <a href="#contact"
+                class="primary-btn px-5 py-2.5 rounded-lg text-sm font-bold"
+                data-i18n="navStart">
+                Start Project
+            </a>
+
+        </div>
+
+        <!-- MOBILE CONTROLS -->
+        <div class="flex items-center gap-3 md:hidden">
+
+            <button id="mobileLanguage"
+                class="border border-cyan-400/40 text-cyan-300 px-3 py-2 rounded-lg text-xs font-bold">
+                SW
+            </button>
+
+            <button id="menuBtn" class="text-white p-2" aria-label="Open navigation" aria-expanded="false">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu flex-col gap-5 px-6 pb-6 pt-2 border-t border-white/10">
+
+        <a href="#home" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="#services" class="nav-link" data-i18n="navServices">Services</a>
+        <a href="#portfolio" class="nav-link" data-i18n="navPortfolio">Portfolio</a>
+        <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
+
+        <a href="#contact" class="primary-btn text-center rounded-lg py-3 font-bold" data-i18n="navStart">
+            Start Project
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ===================================== -->
+<!-- HERO SECTION -->
+<!-- ===================================== -->
+
+<section id="home" class="hero-bg min-h-screen flex items-center relative pt-32 pb-20 overflow-hidden">
+
+    <div class="orb bg-blue-600 w-72 h-72 top-40 -left-32"></div>
+    <div class="orb bg-cyan-500 w-72 h-72 bottom-20 right-0"></div>
+
+    <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+        <!-- HERO TEXT -->
+        <div class="reveal">
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 mb-8">
+
+                <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+
+                <span class="text-xs text-cyan-300 font-semibold tracking-wider" data-i18n="heroBadge">
+                    NEXT GENERATION DIGITAL AGENCY
+                </span>
+
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.12] tracking-tight mb-7">
+
+                <span data-i18n="heroTitle">Own The Future of</span>
+
+                <span class="gradient-text block" data-i18n="heroHighlight">
+                    Digital Innovation
+                </span>
+
+            </h1>
+
+            <p class="text-slate-400 text-base sm:text-lg leading-8 max-w-xl mb-10"
+                data-i18n="heroDescription">
+
+                Building high-performance websites, AI-powered systems, and e-commerce solutions for modern businesses.
+
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+
+                <a href="#contact"
+                    class="primary-btn px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3">
+
+                    <span data-i18n="heroCTA">Start Project</span>
+
+                    <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+
+                </a>
+
+                <a href="#services"
+                    class="secondary-btn px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3">
+
+                    <span data-i18n="heroExplore">Explore Services</span>
+
+                    <i data-lucide="arrow-down" class="w-5 h-5"></i>
+
+                </a>
+
+            </div>
+
+            <div class="flex flex-wrap gap-8 mt-14">
+
+                <div>
+                    <h3 class="text-2xl font-black gradient-text">Web</h3>
+                    <p class="text-xs text-slate-500 mt-1" data-i18n="heroStat1">Development</p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-black gradient-text">AI</h3>
+                    <p class="text-xs text-slate-500 mt-1" data-i18n="heroStat2">Automation</p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-black gradient-text">E-Commerce</h3>
+                    <p class="text-xs text-slate-500 mt-1" data-i18n="heroStat3">Digital Business</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+        <div class="relative hidden sm:block reveal">
+
+            <div class="absolute inset-0 bg-blue-600/10 blur-3xl rounded-full"></div>
+
+            <div class="glass rounded-3xl p-6 relative floating glow">
+
+                <div class="flex items-center justify-between mb-8">
+
+                    <div class="flex gap-2">
+                        <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                        <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                        <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                    </div>
+
+                    <span class="text-xs text-slate-500">NEXUS SYSTEM / 01</span>
+
+                </div>
+
+                <div class="border border-blue-400/20 rounded-2xl p-6 bg-[#080f20]">
+
+                    <div class="flex items-center gap-4 mb-8">
+
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center">
+                            <i data-lucide="cpu" class="text-cyan-400 w-7 h-7"></i>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg">Nexus Intelligence</h3>
+                            <p class="text-xs text-slate-500">Digital Ecosystem</p>
+                        </div>
+
+                        <span class="ml-auto text-cyan-400 text-xs">● ONLINE</span>
+
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-5">
+
+                        <div class="gradient-border rounded-xl p-5">
+                            <i data-lucide="globe" class="text-blue-400 mb-4"></i>
+                            <h4 class="font-bold">Web Systems</h4>
+                            <p class="text-xs text-slate-500 mt-2">Modern Digital Experiences</p>
+                        </div>
+
+                        <div class="gradient-border rounded-xl p-5">
+                            <i data-lucide="brain-circuit" class="text-cyan-400 mb-4"></i>
+                            <h4 class="font-bold">AI Solutions</h4>
+                            <p class="text-xs text-slate-500 mt-2">Intelligent Automation</p>
+                        </div>
+
+                        <div class="gradient-border rounded-xl p-5">
+                            <i data-lucide="shopping-cart" class="text-cyan-400 mb-4"></i>
+                            <h4 class="font-bold">E-Commerce</h4>
+                            <p class="text-xs text-slate-500 mt-2">Digital Marketplaces</p>
+                        </div>
+
+                        <div class="gradient-border rounded-xl p-5">
+                            <i data-lucide="layers" class="text-blue-400 mb-4"></i>
+                            <h4 class="font-bold">UI / UX</h4>
+                            <p class="text-xs text-slate-500 mt-2">Premium Design Systems</p>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-between items-center text-xs text-slate-500">
+                        <span>BUILDING TOMORROW</span>
+                        <span class="text-cyan-400">NEXUS DIGITAL © 2026</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================== -->
+<!-- SERVICES SECTION -->
+<!-- ===================================== -->
+
+<section id="services" class="py-28 relative">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+
+            <p class="section-label mb-4" data-i18n="serviceLabel">WHAT WE DO</p>
+
+            <h2 class="text-3xl sm:text-5xl font-black mb-6" data-i18n="serviceTitle">
+                Technology That Moves Your Business Forward
+            </h2>
+
+            <p class="text-slate-400 leading-7" data-i18n="serviceDescription">
+                We transform ideas into powerful digital experiences through modern technology, intelligent systems and creative engineering.
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- SERVICE 1 -->
+            <div class="gradient-border rounded-2xl p-7 transition-smooth reveal">
+
+                <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-7">
+                    <i data-lucide="code-2" class="text-blue-400 w-7 h-7"></i>
+                </div>
+
+                <h3 class="text-xl font-bold mb-4" data-i18n="service1Title">
+                    Custom Website Development
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7" data-i18n="service1Description">
+                    Professional corporate websites, portfolios and custom digital platforms built for performance and growth.
+                </p>
+
+                <div class="mt-7 text-cyan-400 text-sm font-semibold flex items-center gap-2">
+                    <span data-i18n="learnMore">Learn More</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </div>
+
+            </div>
+
+
+            <!-- SERVICE 2 -->
+            <div class="gradient-border rounded-2xl p-7 transition-smooth reveal">
+
+                <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-7">
+                    <i data-lucide="shopping-bag" class="text-cyan-400 w-7 h-7"></i>
+                </div>
+
+                <h3 class="text-xl font-bold mb-4" data-i18n="service2Title">
+                    E-Commerce & Marketplaces
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7" data-i18n="service2Description">
+                    Powerful online stores, bilingual marketplaces, digital payment systems and scalable business platforms.
+                </p>
+
+                <div class="mt-7 text-cyan-400 text-sm font-semibold flex items-center gap-2">
+                    <span data-i18n="learnMore">Learn More</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </div>
+
+            </div>
+
+
+            <!-- SERVICE 3 -->
+            <div class="gradient-border rounded-2xl p-7 transition-smooth reveal">
+
+                <div class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-7">
+                    <i data-lucide="brain-circuit" class="text-indigo-400 w-7 h-7"></i>
+                </div>
+
+                <h3 class="text-xl font-bold mb-4" data-i18n="service3Title">
+                    AI-Powered Integration
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7" data-i18n="service3Description">
+                    Smart automation, AI integrations and intelligent digital tools designed to improve productivity.
+                </p>
+
+                <div class="mt-7 text-cyan-400 text-sm font-semibold flex items-center gap-2">
+                    <span data-i18n="learnMore">Learn More</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </div>
+
+            </div>
+
+
+            <!-- SERVICE 4 -->
+            <div class="gradient-border rounded-2xl p-7 transition-smooth reveal">
+
+                <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-7">
+                    <i data-lucide="palette" class="text-purple-400 w-7 h-7"></i>
+                </div>
+
+                <h3 class="text-xl font-bold mb-4" data-i18n="service4Title">
+                    Landing Pages & UI/UX
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7" data-i18n="service4Description">
+                    High-converting landing pages and beautiful user interfaces that create exceptional digital experiences.
+                </p>
+
+                <div class="mt-7 text-cyan-400 text-sm font-semibold flex items-center gap-2">
+                    <span data-i18n="learnMore">Learn More</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================== -->
+<!-- PORTFOLIO SECTION -->
+<!-- ===================================== -->
+
+<section id="portfolio" class="py-28 bg-[#080e1e] relative">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-16 reveal">
+
+            <div>
+                <p class="section-label mb-4" data-i18n="portfolioLabel">SELECTED WORK</p>
+
+                <h2 class="text-3xl sm:text-5xl font-black" data-i18n="portfolioTitle">
+                    Digital Experiences
+                </h2>
+
+                <p class="text-slate-400 mt-5 max-w-lg" data-i18n="portfolioDescription">
+                    Explore selected demonstration projects showcasing our design and development capabilities.
+                </p>
+            </div>
+
+            <span class="text-xs tracking-widest text-cyan-400 border border-cyan-400/20 rounded-full px-5 py-3">
+                PORTFOLIO / DEMO
+            </span>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- PROJECT 1 -->
+            <div class="gradient-border rounded-3xl overflow-hidden transition-smooth reveal">
+
+                <div class="project-visual h-64 flex items-center justify-center p-8 relative">
+
+                    <div class="w-full max-w-sm glass rounded-2xl p-5">
+
+                        <div class="flex justify-between items-center mb-5">
+                            <span class="font-black text-lg">🛍️ Soko Swahili</span>
+                            <span class="text-xs text-cyan-400">MARKETPLACE</span>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3">
+
+                            <div class="bg-blue-500/20 rounded-xl h-20 flex items-center justify-center">
+                                <i data-lucide="smartphone" class="text-cyan-400"></i>
+                            </div>
+
+                            <div class="bg-blue-500/20 rounded-xl h-20 flex items-center justify-center">
+                                <i data-lucide="shopping-bag" class="text-cyan-400"></i>
+                            </div>
+
+                            <div class="bg-blue-500/20 rounded-xl h-20 flex items-center justify-center">
+                                <i data-lucide="package" class="text-cyan-400"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-5 h-2 bg-blue-500/20 rounded-full"></div>
+                        <div class="mt-2 h-2 w-2/3 bg-cyan-500/30 rounded-full"></div>
+
+                    </div>
+
+                    <span class="absolute bottom-5 right-5 text-[10px] text-cyan-300 tracking-widest">
+                        PROJECT 001
+                    </span>
+
+                </div>
+
+                <div class="p-7">
+
+                    <div class="flex justify-between items-center mb-4">
+
+                        <h3 class="text-2xl font-bold">Soko Swahili</h3>
+
+                        <span class="text-[10px] bg-cyan-500/10 text-cyan-400 px-3 py-2 rounded-full">
+                            E-COMMERCE
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-400 text-sm leading-7 mb-6" data-i18n="project1Description">
+                        A bilingual digital marketplace concept connecting buyers and sellers through a modern online shopping experience.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs text-slate-400 border border-white/10 rounded px-3 py-2">HTML5</span>
+                        <span class="text-xs text-slate-400 border border-white/10 rounded px-3 py-2">Tailwind CSS</span>
+                        <span class="text-xs text-slate-400 border border-white/10 rounded px-3 py-2">JavaScript</span>
+                    </div>
+
+                    <a href="https://soko-swahili.vercel.app/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="text-cyan-400 font-semibold text-sm flex items-center gap-2">
+
+                        <span data-i18n="viewProject">View Project</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+            <div class="gradient-border rounded-3xl overflow-hidden transition-smooth reveal">
+
+                <div class="project-visual h-64 flex items-center justify-center p-8 relative">
+
+                    <div class="w-full max-w-sm text-center glass rounded-2xl p-8">
+
+                        <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-5">
+                            <i data-lucide="building-2" class="w-7 h-7 text-white"></i>
+                        </div>
+
+                        <h3 class="font-black text-xl mb-2">BUSINESS PRO</h3>
+
+                        <p class="text-xs text-slate-400">BUILD YOUR DIGITAL PRESENCE</p>
+
+                        <div class="mt-6 bg-blue-600 h-2 w-24 rounded-full mx-auto"></div>
+
+                    </div>
+
+                    <span class="absolute bottom-5 right-5 text-[10px] text-cyan-300 tracking-widest">
+                        PROJECT 002
+                    </span>
+
+                </div>
+
+                <div class="p-7">
+
+                    <div class="flex justify-between items-center mb-4">
+
+                        <h3 class="text-2xl font-bold" data-i18n="project2Title">
+                            Business Pro
+                        </h3>
+
+                        <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-2 rounded-full">
+                            WEB DESIGN
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-400 text-sm leading-7 mb-6" data-i18n="project2Description">
+                        A modern corporate landing page concept featuring a premium layout, conversion-focused design and responsive interface.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs text-slate-400 border border-white/10 rounded px-3 py-2">HTML5</span>
+                        <span class="text-xs text-slate-400 border border-white/10 rounded px-3 py-2">CSS3</span>
+                        <span class="text-xs text-slate-400 border border-white/10 rounded px-3 py-2">JavaScript</span>
+                    </div>
+
+                    <a href="#contact"
+                       class="text-cyan-400 font-semibold text-sm flex items-center gap-2">
+
+                        <span data-i18n="requestDemo">Request a Demo</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="text-center text-xs text-slate-500 mt-8" data-i18n="portfolioNote">
+            Portfolio includes demonstration concepts. Project status is subject to development and deployment.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================== -->
+<!-- WHY CHOOSE US -->
+<!-- ===================================== -->
+
+<section class="py-24 relative">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div class="reveal">
+
+                <p class="section-label mb-4" data-i18n="whyLabel">THE NEXUS ADVANTAGE</p>
+
+                <h2 class="text-3xl sm:text-5xl font-black leading-tight mb-7" data-i18n="whyTitle">
+                    We Build More Than Websites. We Build Digital Possibilities.
+                </h2>
+
+                <p class="text-slate-400 leading-8" data-i18n="whyDescription">
+                    Our approach combines modern technology, thoughtful design and business-focused development to create solutions that make a difference.
+                </p>
+
+                <a href="#contact" class="inline-flex items-center gap-3 mt-9 text-cyan-400 font-bold">
+                    <span data-i18n="whyCTA">Let's Build Something Great</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="grid grid-cols-2 gap-5 reveal">
+
+                <div class="glass rounded-2xl p-6">
+                    <i data-lucide="smartphone" class="text-cyan-400 w-8 h-8 mb-5"></i>
+                    <h3 class="font-bold mb-2" data-i18n="why1Title">Mobile First</h3>
+                    <p class="text-xs text-slate-400 leading-6" data-i18n="why1Description">
+                        Responsive experiences on every screen.
+                    </p>
+                </div>
+
+                <div class="glass rounded-2xl p-6">
+                    <i data-lucide="zap" class="text-blue-400 w-8 h-8 mb-5"></i>
+                    <h3 class="font-bold mb-2" data-i18n="why2Title">Performance</h3>
+                    <p class="text-xs text-slate-400 leading-6" data-i18n="why2Description">
+                        Efficient and performance-focused development.
+                    </p>
+                </div>
+
+                <div class="glass rounded-2xl p-6">
+                    <i data-lucide="shield-check" class="text-cyan-400 w-8 h-8 mb-5"></i>
+                    <h3 class="font-bold mb-2" data-i18n="why3Title">Modern Standards</h3>
+                    <p class="text-xs text-slate-400 leading-6" data-i18n="why3Description">
+                        Clean code and modern development practices.
+                    </p>
+                </div>
+
+                <div class="glass rounded-2xl p-6">
+                    <i data-lucide="infinity" class="text-blue-400 w-8 h-8 mb-5"></i>
+                    <h3 class="font-bold mb-2" data-i18n="why4Title">Scalable Solutions</h3>
+                    <p class="text-xs text-slate-400 leading-6" data-i18n="why4Description">
+                        Built with future growth in mind.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================== -->
+<!-- CONTACT SECTION -->
+<!-- ===================================== -->
+
+<section id="contact" class="py-28 bg-[#080e1e] relative overflow-hidden">
+
+    <div class="orb bg-blue-600 w-96 h-96 -left-32 top-20"></div>
+    <div class="orb bg-cyan-500 w-96 h-96 right-0 bottom-0"></div>
+
+    <div class="max-w-5xl mx-auto px-5 relative z-10">
+
+        <div class="text-center mb-14 reveal">
+
+            <p class="section-label mb-5" data-i18n="contactLabel">LET'S CONNECT</p>
+
+            <h2 class="text-4xl sm:text-6xl font-black mb-6" data-i18n="contactTitle">
+                Your Next Big Idea Starts Here.
+            </h2>
+
+            <p class="text-slate-400 max-w-xl mx-auto leading-8" data-i18n="contactDescription">
+                Have a project in mind? Let's discuss how Nexus Digital Solutions can help bring your vision to life.
+            </p>
+
+        </div>
+
+
+        <div class="glass rounded-3xl p-7 sm:p-12 reveal">
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+                <!-- WHATSAPP -->
+                <a href="https://wa.me/255798033596?text=Hello%20Nexus%20Digital%20Solutions!%20I%20am%20interested%20in%20your%20digital%20services."
+                   target="_blank" rel="noopener noreferrer"
+                   class="text-center group">
+
+                    <div class="w-16 h-16 mx-auto bg-green-500/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-green-500/20 transition">
+
+                        <i data-lucide="message-circle" class="text-green-400 w-8 h-8"></i>
+
+                    </div>
+
+                    <h3 class="font-bold mb-2">WhatsApp</h3>
+
+                    <p class="text-sm text-slate-400">+255 798 033 596</p>
+
+                </a>
+
+
+                <!-- EMAIL -->
+                <a href="mailto:nexus.tech.tz@gmail.com?subject=Project%20Inquiry%20-%20Nexus%20Digital"
+                   class="text-center group">
+
+                    <div class="w-16 h-16 mx-auto bg-blue-500/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-blue-500/20 transition">
+
+                        <i data-lucide="mail" class="text-blue-400 w-8 h-8"></i>
+
+                    </div>
+
+                    <h3 class="font-bold mb-2">Email</h3>
+
+                    <p class="text-sm text-slate-400 break-all">nexus.tech.tz@gmail.com</p>
+
+                </a>
+
+
+                <!-- PHONE -->
+                <a href="tel:+255798033596" class="text-center group">
+
+                    <div class="w-16 h-16 mx-auto bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-cyan-500/20 transition">
+
+                        <i data-lucide="phone" class="text-cyan-400 w-8 h-8"></i>
+
+                    </div>
+
+                    <h3 class="font-bold mb-2">Phone</h3>
+
+                    <p class="text-sm text-slate-400">0798033596</p>
+                    <p class="text-sm text-slate-400">+255 798 033 596</p>
+
+                </a>
+
+            </div>
+
+
+            <div class="border-t border-white/10 pt-9 text-center">
+
+                <h3 class="text-xl font-bold mb-4" data-i18n="contactCTA">
+                    Ready to Own The Future?
+                </h3>
+
+                <a href="https://wa.me/255798033596?text=Hello%20Nexus%20Digital%20Solutions!%20I%20would%20like%20to%20discuss%20a%20project."
+                   target="_blank" rel="noopener noreferrer"
+                   class="primary-btn inline-flex items-center justify-center gap-3 px-9 py-4 rounded-xl font-bold">
+
+                    <i data-lucide="message-circle"></i>
+
+                    <span data-i18n="contactButton">Start a Conversation</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================== -->
+<!-- FOOTER -->
+<!-- ===================================== -->
+
+<footer class="bg-[#030611] border-t border-white/10 py-10">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-7">
+
+            <a href="#home" class="flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center">
+                    <i data-lucide="hexagon" class="text-white"></i>
+                </div>
+
+                <div>
+                    <h3 class="font-extrabold">
+                        Nexus <span class="gradient-text">Digital</span>
+                    </h3>
+                    <p class="text-[9px] text-slate-500 tracking-[3px]">OWN THE FUTURE</p>
+                </div>
+
+            </a>
+
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
+
+                <a href="#home" class="hover:text-cyan-400" data-i18n="navHome">Home</a>
+                <a href="#services" class="hover:text-cyan-400" data-i18n="navServices">Services</a>
+                <a href="#portfolio" class="hover:text-cyan-400" data-i18n="navPortfolio">Portfolio</a>
+                <a href="#contact" class="hover:text-cyan-400" data-i18n="navContact">Contact</a>
+
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/10 mt-9 pt-7 flex flex-col sm:flex-row justify-between items-center gap-4">
+
+            <p class="text-xs text-slate-600">
+                © <span id="year"></span> Nexus Digital Solutions. All rights reserved.
+            </p>
+
+            <p class="text-xs text-slate-600 tracking-wider">
+                BUILT FOR THE FUTURE.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ===================================== -->
+<!-- FLOATING WHATSAPP BUTTON -->
+<!-- ===================================== -->
+
+<a href="https://wa.me/255798033596?text=Hello%20Nexus%20Digital%20Solutions!"
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Chat with Nexus Digital Solutions on WhatsApp"
+   class="fixed bottom-6 right-5 z-40 w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 flex items-center justify-center shadow-lg shadow-green-500/30 transition">
+
+    <i data-lucide="message-circle" class="text-white w-7 h-7"></i>
+
+</a>
+
+
+<!-- ===================================== -->
+<!-- JAVASCRIPT: LANGUAGE + MOBILE MENU -->
+<!-- ===================================== -->
+
+<script>
+
+    // =================================
+    // TRANSLATION DATABASE
+    // =================================
+
+    const translations = {
+
+        en: {
+
+            navHome: "Home",
+            navServices: "Services",
+            navPortfolio: "Portfolio",
+            navContact: "Contact",
+            navStart: "Start Project",
+
+            heroBadge: "NEXT GENERATION DIGITAL AGENCY",
+            heroTitle: "Own The Future of",
+            heroHighlight: "Digital Innovation",
+            heroDescription: "Building high-performance websites, AI-powered systems, and e-commerce solutions for modern businesses.",
+            heroCTA: "Start Project",
+            heroExplore: "Explore Services",
+            heroStat1: "Development",
+            heroStat2: "Automation",
+            heroStat3: "Digital Business",
+
+            serviceLabel: "WHAT WE DO",
+            serviceTitle: "Technology That Moves Your Business Forward",
+            serviceDescription: "We transform ideas into powerful digital experiences through modern technology, intelligent systems and creative engineering.",
+
+            service1Title: "Custom Website Development",
+            service1Description: "Professional corporate websites, portfolios and custom digital platforms built for performance and growth.",
+
+            service2Title: "E-Commerce & Marketplaces",
+            service2Description: "Powerful online stores, bilingual marketplaces, digital payment systems and scalable business platforms.",
+
+            service3Title: "AI-Powered Integration",
+            service3Description: "Smart automation, AI integrations and intelligent digital tools designed to improve productivity.",
+
+            service4Title: "Landing Pages & UI/UX",
+            service4Description: "High-converting landing pages and beautiful user interfaces that create exceptional digital experiences.",
+
+            learnMore: "Learn More",
+
+            portfolioLabel: "SELECTED WORK",
+            portfolioTitle: "Digital Experiences",
+            portfolioDescription: "Explore selected demonstration projects showcasing our design and development capabilities.",
+
+            project1Description: "A bilingual digital marketplace concept connecting buyers and sellers through a modern online shopping experience.",
+
+            project2Title: "Business Pro",
+            project2Description: "A modern corporate landing page concept featuring a premium layout, conversion-focused design and responsive interface.",
+
+            viewProject: "View Project",
+            requestDemo: "Request a Demo",
+
+            portfolioNote: "Portfolio includes demonstration concepts. Project status is subject to development and deployment.",
+
+            whyLabel: "THE NEXUS ADVANTAGE",
+            whyTitle: "We Build More Than Websites. We Build Digital Possibilities.",
+            whyDescription: "Our approach combines modern technology, thoughtful design and business-focused development to create solutions that make a difference.",
+            whyCTA: "Let's Build Something Great",
+
+            why1Title: "Mobile First",
+            why1Description: "Responsive experiences on every screen.",
+
+            why2Title: "Performance",
+            why2Description: "Efficient and performance-focused development.",
+
+            why3Title: "Modern Standards",
+            why3Description: "Clean code and modern development practices.",
+
+            why4Title: "Scalable Solutions",
+            why4Description: "Built with future growth in mind.",
+
+            contactLabel: "LET'S CONNECT",
+            contactTitle: "Your Next Big Idea Starts Here.",
+            contactDescription: "Have a project in mind? Let's discuss how Nexus Digital Solutions can help bring your vision to life.",
+            contactCTA: "Ready to Own The Future?",
+            contactButton: "Start a Conversation"
+
+        },
+
+
+        sw: {
+
+            navHome: "Mwanzo",
+            navServices: "Huduma",
+            navPortfolio: "Miradi",
+            navContact: "Mawasiliano",
+            navStart: "Anzisha Mradi",
+
+            heroBadge: "WAKALA WA TEKNOLOJIA WA KIZAZI KIPYA",
+            heroTitle: "Miliki Mustakabali wa",
+            heroHighlight: "Ubunifu wa Kidijitali",
+            heroDescription: "Tunatengeneza tovuti zenye kasi na ubora, mifumo inayotumia AI, pamoja na suluhisho za biashara mtandaoni kwa biashara za kisasa.",
+            heroCTA: "Anzisha Mradi",
+            heroExplore: "Chunguza Huduma",
+            heroStat1: "Utengenezaji",
+            heroStat2: "Uendeshaji Kiotomatiki",
+            heroStat3: "Biashara za Kidijitali",
+
+            serviceLabel: "TUNACHOFANYA",
+            serviceTitle: "Teknolojia Inayoisukuma Biashara Yako Mbele",
+            serviceDescription: "Tunabadilisha mawazo kuwa suluhisho imara za kidijitali kupitia teknolojia za kisasa, mifumo janja na ubunifu.",
+
+            service1Title: "Utengenezaji wa Tovuti Maalumu",
+            service1Description: "Tovuti za kampuni, portfolio na mifumo maalumu ya kidijitali iliyoundwa kwa ubora na ukuaji.",
+
+            service2Title: "Biashara Mtandaoni na Masoko",
+            service2Description: "Maduka ya mtandaoni, masoko ya lugha mbili, mifumo ya malipo na majukwaa ya biashara yanayoweza kukua.",
+
+            service3Title: "Ujumuishaji wa Akili Mnemba (AI)",
+            service3Description: "Uendeshaji wa kazi kiotomatiki, ujumuishaji wa AI na zana janja za kuongeza ufanisi.",
+
+            service4Title: "Landing Pages na UI/UX",
+            service4Description: "Kurasa za biashara zinazovutia wateja na miundo mizuri ya mifumo inayorahisisha matumizi.",
+
+            learnMore: "Jifunze Zaidi",
+
+            portfolioLabel: "MIRADI TEULE",
+            portfolioTitle: "Uzoefu wa Kidijitali",
+            portfolioDescription: "Chunguza mifano ya miradi inayoonyesha uwezo wetu katika usanifu na utengenezaji wa mifumo.",
+
+            project1Description: "Mfano wa soko la kidijitali la lugha mbili linalowaunganisha wanunuzi na wauzaji kupitia mfumo wa kisasa wa manunuzi mtandaoni.",
+
+            project2Title: "Business Pro",
+            project2Description: "Mfano wa tovuti ya kisasa ya kampuni yenye muundo wa kitaalamu, inayolenga kuvutia wateja na inayofanya kazi kwenye vifaa mbalimbali.",
+
+            viewProject: "Tazama Mradi",
+            requestDemo: "Omba Mfano",
+
+            portfolioNote: "Portfolio hii ina mifano ya miradi. Hali ya kila mradi inategemea hatua za utengenezaji na uchapishaji.",
+
+            whyLabel: "FAIDA YA NEXUS",
+            whyTitle: "Hatutengenezi Tovuti Pekee. Tunajenga Fursa za Kidijitali.",
+            whyDescription: "Tunachanganya teknolojia za kisasa, usanifu makini na ujenzi wa mifumo inayozingatia mahitaji ya biashara ili kuleta suluhisho zenye thamani.",
+            whyCTA: "Tujenge Kitu Kikubwa Pamoja",
+
+            why1Title: "Simu Kwanza",
+            why1Description: "Mifumo inayofanya kazi vizuri kwenye kila ukubwa wa skrini.",
+
+            why2Title: "Utendaji Bora",
+            why2Description: "Utengenezaji wa mifumo yenye kasi na ufanisi.",
+
+            why3Title: "Viwango vya Kisasa",
+            why3Description: "Code safi na mbinu za kisasa za utengenezaji.",
+
+            why4Title: "Suluhisho Zinazokua",
+            why4Description: "Mifumo iliyoundwa kwa kuzingatia ukuaji wa baadaye.",
+
+            contactLabel: "WASILIANA NASI",
+            contactTitle: "Wazo Lako Kubwa Linaanzia Hapa.",
+            contactDescription: "Una mradi unaoufikiria? Tuongee kuhusu namna Nexus Digital Solutions inavyoweza kukusaidia kutimiza maono yako.",
+            contactCTA: "Uko Tayari Kumiliki Mustakabali?",
+            contactButton: "Anza Mazungumzo"
+
+        }
+
+    };
+
+
+    // =================================
+    // LANGUAGE SWITCHER
+    // =================================
+
+    let currentLanguage = "en";
+
+    function changeLanguage(language) {
+
+        currentLanguage = language;
+
+        document.documentElement.lang = language;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+
+            const key = element.getAttribute("data-i18n");
+
+            if (translations[language][key]) {
+                element.textContent = translations[language][key];
+            }
+
+        });
+
+        // Update both language buttons
+        const nextLanguage = language === "en" ? "SW" : "EN";
+
+        document.getElementById("languageBtn").textContent = nextLanguage;
+        document.getElementById("mobileLanguage").textContent = nextLanguage;
+
+        // Save preference
+        try {
+            localStorage.setItem("nexusLanguage", language);
+        } catch (error) {
+            // Website still works if storage is unavailable.
+        }
+
+    }
+
+
+    // Desktop language toggle
+    document.getElementById("languageBtn").addEventListener("click", () => {
+
+        changeLanguage(currentLanguage === "en" ? "sw" : "en");
+
+    });
+
+
+    // Mobile language toggle
+    document.getElementById("mobileLanguage").addEventListener("click", () => {
+
+        changeLanguage(currentLanguage === "en" ? "sw" : "en");
+
+    });
+
+
+    // =================================
+    // MOBILE MENU
+    // =================================
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+
+        const isOpen = mobileMenu.classList.toggle("active");
+
+        menuBtn.setAttribute("aria-expanded", isOpen);
+
+        document.getElementById("menuIcon").setAttribute(
+            "data-lucide",
+            isOpen ? "x" : "menu"
+        );
+
+        lucide.createIcons();
+
+    });
+
+
+    // Close menu after clicking a navigation link
+    document.querySelectorAll("#mobileMenu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+
+            document.getElementById("menuIcon").setAttribute("data-lucide", "menu");
+
+            lucide.createIcons();
+
+        });
+
+    });
+
+
+    // =================================
+    // REMEMBER LANGUAGE PREFERENCE
+    // =================================
+
+    try {
+
+        const savedLanguage = localStorage.getItem("nexusLanguage");
+
+        if (savedLanguage === "sw" || savedLanguage === "en") {
+            changeLanguage(savedLanguage);
+        }
+
+    } catch (error) {
+        // Default language remains English.
+    }
+
+
+    // =================================
+    // SCROLL ANIMATIONS
+    // =================================
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.12
+    });
+
+
+    document.querySelectorAll(".reveal").forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+
+    // =================================
+    // FOOTER YEAR
+    // =================================
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+    // =================================
+    // INITIALIZE ICONS
+    // =================================
+
+    lucide.createIcons();
+
+</script>
+
+</body>
+</html>
